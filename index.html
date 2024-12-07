@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplikationsträning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link rel="stylesheet" href="style.css">
+  <div class="container">
+  <!-- Inställningsskärm -->
+  <div id="setupScreen" class="setup-screen active">
+    <h2>Välkommen till Multiplikationsträning!</h2>
+    <p>Välj en eller flera tabeller att öva på. Appen hjälper att träna extra på det du behöver. 
+      <br>När du är klar får du ett diplom som du kan spara och visa för din lärare!</p>
+    <div>
+      <label>Ditt namn:</label><br>
+      <input type="text" id="nameInput" placeholder="Skriv ditt namn här">
+    </div>
+    <div>
+      <p>Välj tabeller att öva på:</p>
+      <div class="checkbox-grid" id="tablesCheckboxes">
+        <!-- Checkboxar läggs till via JavaScript -->
+      </div>
+    </div>
+    <button onclick="startPractice()" id="startButton" disabled>Börja öva!</button>
+  </div>
+
+  <!-- Övningsskärm -->
+  <div id="practiceScreen" class="practice-screen">
+    <h3>Hej <span id="studentName"></span>!</h3>
+    <div class="question" id="questionText"></div>
+    <div>
+      <input type="number" id="answerInput" placeholder="Skriv ditt svar här">
+      <button onclick="checkAnswer()" id="checkButton">Svara</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+  </div>
+
+  <!-- Diplom -->
+  <div id="certificateScreen" class="certificate">
+    <div class="trophy">🏆</div>
+    <h2>Grattis <span id="certificateName"></span>!</h2>
+    <p>Du har klarat multiplikationstabellerna:</p>
+    <p id="completedTables"></p>
+    <p>Total tid: <span id="totalTime"></span></p>
+    <p id="dateCompleted"></p>
+    <div class="button-group">
+      <button onclick="resetGame()">Öva igen</button>
+      <button onclick="takeScreenshot()">Spara diplom</button>
+    </div>
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>

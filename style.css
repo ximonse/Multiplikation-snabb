@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Serif:ital@0;1&display=swap');
+
+body {
+  font-family: 'Noto Serif', serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #404040;
+}
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+#setupScreen > p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.setup-screen, .practice-screen, .certificate {
+  display: none;
+}
+.active {
+  display: block;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+button:disabled {
+  background: #cccccc;
+}
+input[type="text"], input[type="number"] {
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+.question {
+  font-size: 24px;
+  margin: 20px 0;
+  text-align: center;
+}
+.feedback {
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.feedback.correct {
+  color: #4CAF50;
+}
+.feedback.incorrect {
+  color: #f44336;
+}
+.certificate {
+  text-align: center;
+  border: 2px solid #4CAF50;
+  padding: 20px;
+}
+.trophy {
+  font-size: 48px;
+  margin: 20px 0;
+}
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
